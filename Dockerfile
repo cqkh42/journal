@@ -1,4 +1,4 @@
-FROM python:3.14
+FROM --platform=linux/arm64/v8 python:3.14
 
 EXPOSE 8000
 
