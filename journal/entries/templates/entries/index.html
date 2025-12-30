@@ -1,0 +1,13 @@
+<h1>Journal</h1>
+
+<ol>
+{% for date, model in days.items %}
+    {% if model %}
+    <li>✅ <a href="{% url 'entries:detail' model.pk %}">{{date|date}}</a></li>
+    {% else %}
+    <li>{{date|date}} no data</li>
+    {% endif %}
+{% endfor %}
+</ol>
+
+
